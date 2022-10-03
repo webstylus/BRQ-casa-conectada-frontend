@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.css">
+
+    <title>Smart Home Auto</title>
+</head>
+
+<body class="bg-black">
+
+<div class="main">
+
+    <div class="screen-car">
+        <div class="header">
+            <span>
+                <i class="fa-solid fa-clock"></i>
+                <span class="date"></span>
+            </span>
+            <span>
+                <i class="fa-brands fa-chromecast"></i>
+                <i class="fa-brands fa-bluetooth-b"></i>
+                <i class="fa-solid fa-signal"></i>
+            </span>
+        </div>
+
+        <div class="load-items interface" style="display: none"  id="hour-item">
+            <span class="hora"></span>
+        </div>
+        <div class="load-items map" style="display: none" id="map-item">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14623.71186651055!2d-46.77687415!3d-23.6069162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1664741765445!5m2!1spt-BR!2sbr"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="load-items music" style="display: none" id="music-item">
+            <div class="image">
+                <img src="img/1582554188135.webp" alt="Lofi hip hop">
+            </div>
+            <div>
+                <h1>The player</h1>
+                <h2>Cosmic Koala</h2>
+                <p>Lofi hip hop music - Beasts to r...</p>
+                <div class="controls">
+                    <i class="fa-solid fa-backward-step fa-2xl"></i>
+                    <i class="fa-solid fa-play fa-2xl" style="color: #93989d"></i>
+                    <i class="fa-solid fa-pause fa-2xl"></i>
+                    <i class="fa-solid fa-stop fa-2xl"></i>
+                    <i class="fa-solid fa-forward-step fa-2xl"></i>
+                    <i class="fa-solid fa-volume-high fa-2xl"></i>
+                </div>
+                <div class="progress" style="height: 2px;">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%;"
+                         aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="load-items home" style="display: none"  id="home-item">
+            <h1>Casa conectada</h1>
+            <ul>
+                <li id="light-toggle" onclick="handleLight()">
+                    <i class="fa-solid fa-toggle-off fa-xl"></i>
+                    <span class="textAction">Acender Luz da garagem</span>
+                </li>
+                <li id="door-toggle" onclick="handleDoor()">
+                    <i class="fa-solid fa-toggle-off fa-xl"></i>
+                    <span class="textAction">Abrir Porta da garagem</span>
+                </li>
+                <li id="alert-toggle" onclick="handleAlert()">
+                    <i class="fa-solid fa-toggle-off fa-xl"></i>
+                    <span class="textAction">Ativar alarme</span>
+                </li>
+                <li class="click-map">
+                    <i class="fa-solid fa-dog fa-xl"></i>
+                    <span>Localizar Pet</span>
+                </li>
+            </ul>
+
+            <div class="lamp" style="display: none">
+                <div class="lamp-text"></div>
+                <i id="light-action" class="fa-regular fa-lightbulb fa-2xl"></i>
+            </div>
+
+            <div class="door" style="display: none">
+                <div class="door-text"></div>
+                <i id="door-action" class="fa-solid fa-door-open fa-2xl"></i>
+            </div>
+
+            <div class="alert-home" style="display: none">
+                <div class="alert-text"></div>
+                <i id="alert-action" class="fa-regular fa-bell fa-2xl"></i>
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <div id="reload">
+                <i class="fa-solid fa-grip"></i>
+            </div>
+            <div id="map">
+                <i class="fa-solid fa-location-dot fa-2xl"></i>
+            </div>
+            <div id="music">
+                <i class="fa-solid fa-music fa-2xl"></i>
+            </div>
+            <div id="home">
+                <i class="fa-solid fa-house-signal fa-2xl"></i>
+            </div>
+        </div>
+
+        <div class="emergency" onclick="handleEmergency()">
+            <span class="sos">SOS</span>
+        </div>
+        <div class="alert-emergency">
+            Contatos de emergência notificados!
+        </div>
+    </div>
+
+</div>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/custom.js"></script>
+
+</body>
+
+</html>
